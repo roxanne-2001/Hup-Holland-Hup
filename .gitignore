@@ -1,0 +1,14 @@
+.next/
+node_modules/
+*.log
+.env
+.env.local
+.DS_Store
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# Node downloads
+node-v*
