@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import Navbar from './components/Navbar'
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -55,41 +56,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-lg bg-white/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center gap-12">
-              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Hup Holland
-              </Link>
-              <div className="hidden md:flex items-center space-x-8">
-                <Link href="/funding" className="text-gray-600 hover:text-gray-900 font-medium transition">
-                  Funding
-                </Link>
-                <Link href="/recommendations" className="text-gray-600 hover:text-gray-900 font-medium transition">
-                  Platform
-                </Link>
-                <Link href="#features" className="text-gray-600 hover:text-gray-900 font-medium transition">
-                  Features
-                </Link>
-                <Link href="#pricing" className="text-gray-600 hover:text-gray-900 font-medium transition">
-                  Pricing
-                </Link>
-              </div>
-            </div>
-            <div className="hidden md:flex items-center space-x-4">
-              <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium px-4 py-2">
-                Sign in
-              </Link>
-              <Link href="/signup">
-                <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2.5 rounded-xl hover:shadow-lg hover:scale-105 transition transform font-medium">
-                  Get Started
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section - Modern SaaS Style */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50">

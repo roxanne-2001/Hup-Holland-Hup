@@ -60,6 +60,7 @@ export async function createSession(userId: number): Promise<string> {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
+    path: '/',
   })
 
   return sessionId

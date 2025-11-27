@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
+import Navbar from '../components/Navbar'
 
 interface UserData {
   id?: number
@@ -177,29 +178,7 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <nav className="bg-white shadow sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Hup Holland
-            </Link>
-            <div className="flex items-center gap-6">
-              <Link href="/recommendations" className="text-gray-600 hover:text-indigo-600 font-semibold transition">
-                Aanbevelingen
-              </Link>
-              <Link href="/funding" className="text-gray-600 hover:text-indigo-600 font-semibold transition">
-                Funding
-              </Link>
-              <button
-                onClick={handleLogout}
-                className="text-red-600 hover:text-red-700 font-semibold transition"
-              >
-                Uitloggen
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
